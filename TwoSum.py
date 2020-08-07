@@ -18,6 +18,16 @@ def two_sum(nums, target):
 
 # nums = [2, 7, 11, 15] 
 # target = 9
+# expected = [0, 1]
+
+def two_sum_v2(nums, target):
+    for i, n in enumerate(nums):
+        second = target - n
+        if second in nums and nums.index(second) != i:
+                return [i, nums.index(second)]
+        
+
 target = 4 
 nums = [2, 5, 3, 2]
 print(two_sum(nums, target))
+print(two_sum_v2(nums, target))
