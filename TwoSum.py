@@ -16,9 +16,7 @@ def two_sum(nums, target):
                 if n + m == target:
                     return [i, j]
 
-# nums = [2, 7, 11, 15] 
-# target = 9
-# expected = [0, 1]
+# The following version is more efficient, since uses just one interation keeping the linear time.
 
 def two_sum_v2(nums, target):
     for i, n in enumerate(nums):
@@ -27,7 +25,3 @@ def two_sum_v2(nums, target):
                 return [i, nums.index(second)]
         
 
-target = 4 
-nums = [2, 5, 3, 2]
-print(two_sum(nums, target))
-print(two_sum_v2(nums, target))
